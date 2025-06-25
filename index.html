@@ -34,6 +34,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       min-height: 100vh;
       padding: 20px;
       position: relative;
@@ -45,10 +46,24 @@
       margin: 40px 0 20px;
     }
 
+    .whatsapp-button {
+      background-color: #25D366;
+      color: #161e2a;
+      padding: 18px 40px;
+      font-size: 22px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 40px 0;
+      text-transform: uppercase;
+      font-weight: bold;
+      z-index: 2;
+    }
+
     .bubbles {
       position: relative;
       width: 100%;
-      height: 200px;
+      height: 300px;
       margin-top: 20px;
     }
 
@@ -58,7 +73,7 @@
       color: black;
       border: 2px solid #161e2a;
       border-radius: 25px;
-      padding: 10px 15px;
+      padding: 15px 20px;
       display: flex;
       align-items: center;
       opacity: 0;
@@ -66,17 +81,14 @@
       animation: slideUpOut 16s infinite;
       left: 50%;
       transform: translateX(-50%);
+      font-size: 1.1rem;
     }
 
     .bubble img {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    .bubble span {
-      font-size: 0.95rem;
+      margin-right: 12px;
     }
 
     .bubble:nth-child(1) { bottom: 0px; animation-delay: 0s; }
@@ -92,35 +104,21 @@
       100% { opacity: 0; transform: translate(-50%, -100%); }
     }
 
-    .whatsapp-button {
-      background-color: #25D366;
-      color: #161e2a;
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      margin-top: 40px;
-      z-index: 2;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
     @media (max-width: 480px) {
       .bubble {
         max-width: 90vw;
-        padding: 10px;
-        font-size: 14px;
+        padding: 12px;
+        font-size: 1rem;
       }
 
       .bubble img {
-        width: 36px;
-        height: 36px;
+        width: 44px;
+        height: 44px;
       }
 
       .whatsapp-button {
         width: 90vw;
-        font-size: 16px;
+        font-size: 18px;
       }
     }
   </style>
@@ -133,6 +131,10 @@
 <body>
   <div class="container">
     <img src="logo_solo-removebg.png" alt="Alpaca Logo" class="logo" />
+
+    <a href="https://alpacabet.co/register">
+      <button class="whatsapp-button"><strong>REGÍSTRATE EN ALPACABET</strong></button>
+    </a>
 
     <div class="bubbles">
       <div class="bubble">
@@ -152,11 +154,6 @@
         <span>Una excelente opción para jugar desde Chile.</span>
       </div>
     </div>
-
-    <a href="https://alpacabet.co/register">
-      <button class="whatsapp-button"><strong>REGÍSTRATE EN ALPACABET</strong></button>
-    </a>
   </div>
 </body>
 </html>
-
