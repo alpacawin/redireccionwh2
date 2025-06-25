@@ -36,4 +36,112 @@
       align-items: center;
       min-height: 100vh;
       padding: 20px;
-      position: relat
+      position: relative;
+    }
+
+    .logo {
+      max-width: 90vw;
+      height: auto;
+      margin: 40px 0 20px;
+    }
+
+    .bubble {
+      position: absolute;
+      background-color: white;
+      color: black;
+      border: 2px solid #161e2a;
+      border-radius: 25px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: slideInOut 16s infinite;
+      left: -100%;
+    }
+
+    .bubble img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .bubble span {
+      font-size: 0.95rem;
+    }
+
+    .bubble:nth-of-type(1) { top: 65%; animation-delay: 0s; }
+    .bubble:nth-of-type(2) { top: 73%; animation-delay: 4s; }
+    .bubble:nth-of-type(3) { top: 81%; animation-delay: 8s; }
+    .bubble:nth-of-type(4) { top: 89%; animation-delay: 12s; }
+
+    @keyframes slideInOut {
+      0% { opacity: 0; transform: translateX(-100%); }
+      10% { opacity: 1; transform: translateX(0); }
+      30% { opacity: 1; transform: translateX(0); }
+      40% { opacity: 0; transform: translateX(100%); }
+      100% { opacity: 0; transform: translateX(100%); }
+    }
+
+    .whatsapp-button {
+      background-color: #25D366;
+      color: #161e2a;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 40px;
+      z-index: 2;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    @media (max-width: 480px) {
+      .bubble {
+        max-width: 90vw;
+        padding: 10px;
+      }
+
+      .whatsapp-button {
+        width: 90vw;
+        font-size: 16px;
+      }
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://alpacabet.co/register";
+    }, 20000);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img src="logo_solo-removebg.png" alt="Alpaca Logo" class="logo" />
+
+    <!-- GLOBOS DE COMENTARIOS FORMALES -->
+    <div class="bubble">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+      <span>Excelente plataforma, muy recomendable.</span>
+    </div>
+    <div class="bubble">
+      <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="">
+      <span>Un servicio confiable y seguro.</span>
+    </div>
+    <div class="bubble">
+      <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="">
+      <span>Disfruto mucho de los bonos y promociones.</span>
+    </div>
+    <div class="bubble">
+      <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="">
+      <span>Una excelente opción para jugar desde Chile.</span>
+    </div>
+
+    <!-- BOTÓN ACTUALIZADO -->
+    <a href="https://alpacabet.co/register">
+      <button class="whatsapp-button"><strong>REGÍSTRATE EN ALPACABET</strong></button>
+    </a>
+  </div>
+</body>
+</html>
